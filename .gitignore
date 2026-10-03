@@ -1,0 +1,11 @@
+# User uploads (keep folders, ignore files)
+storage/uploads/avatars/*
+storage/uploads/products/*
+!storage/uploads/avatars/.gitkeep
+!storage/uploads/products/.gitkeep
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+*.code-workspace

@@ -1,0 +1,172 @@
+/* ==========================================================================
+   Farmer Market Portal - Order Delivery Tracking Styles
+   Visual timeline, milestones, progress steps
+   ========================================================================== */
+
+.tracking-timeline-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 36px 30px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow-sm);
+}
+
+.tracking-timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 40px 0 20px;
+}
+
+.tracking-timeline::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: 40px;
+    right: 40px;
+    height: 4px;
+    background: var(--gray-200);
+    z-index: 1;
+}
+
+.tracking-step {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.step-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-full);
+    background: #ffffff;
+    border: 3px solid var(--gray-300);
+    color: var(--gray-400);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    transition: var(--transition);
+    margin-bottom: 12px;
+}
+
+.step-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gray-600);
+    line-height: 1.3;
+}
+
+.step-time {
+    font-size: 11px;
+    color: var(--gray-400);
+    margin-top: 4px;
+}
+
+/* Step States */
+.tracking-step.completed .step-icon-wrap {
+    background: var(--primary-600);
+    border-color: var(--primary-600);
+    color: #ffffff;
+    box-shadow: 0 0 0 4px var(--primary-100);
+}
+
+.tracking-step.completed .step-title {
+    color: var(--primary-800);
+}
+
+.tracking-step.active .step-icon-wrap {
+    background: #ffffff;
+    border-color: var(--accent-amber-dark);
+    color: var(--accent-amber-dark);
+    box-shadow: 0 0 0 6px var(--accent-amber-light);
+    animation: pulseRing 1.8s infinite;
+}
+
+.tracking-step.active .step-title {
+    color: var(--accent-amber-dark);
+    font-weight: 800;
+}
+
+@keyframes pulseRing {
+    0% {
+        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(245, 158, 11, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+    }
+}
+
+/* Progress bar fill calculation */
+.timeline-progress-bar {
+    position: absolute;
+    top: 24px;
+    left: 40px;
+    height: 4px;
+    background: var(--primary-600);
+    z-index: 1;
+    transition: width 0.4s ease;
+}
+
+/* Tracking Details Header */
+.tracking-status-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    background: var(--primary-50);
+    border: 1px solid var(--primary-200);
+    border-radius: var(--radius-md);
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.tracking-status-left h2 {
+    font-size: 20px;
+    color: var(--primary-900);
+}
+
+.tracking-status-left p {
+    font-size: 13.5px;
+    color: var(--primary-700);
+    margin-top: 4px;
+}
+
+/* Confirm Receipt Action Box */
+.confirm-receipt-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: var(--radius-md);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .tracking-timeline {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .tracking-timeline::before {
+        display: none;
+    }
+    .tracking-step {
+        flex-direction: row;
+        gap: 16px;
+        text-align: left;
+    }
+}
