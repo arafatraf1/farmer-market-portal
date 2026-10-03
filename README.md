@@ -2,8 +2,8 @@
 
 A web app that connects local farmers directly with buyers. No middlemen. Verified farmers. Fresh produce tracking.
 
-> **Course project — Web Programming, United International University (UIU).**
-> Built by a team of **5 members** (me + 4 teammates).
+> ## 🎓 Course project — Web Programming, United International University (UIU)
+> ### 🕸️ Built by **Team SpideeWeb**
 
 ---
 
@@ -120,13 +120,13 @@ farmer-market-portal/
 
 Web Programming project, UIU — 5 members in total.
 
-| Name | Student ID | Role |
-| :--- | :--- | :--- |
-| _Your name_ | _ID_ | _e.g. Backend_ |
-| _Member 2_ | _ID_ | _..._ |
-| _Member 3_ | _ID_ | _..._ |
-| _Member 4_ | _ID_ | _..._ |
-| _Member 5_ | _ID_ | _..._ |
+| Name | Student ID |
+| :--- | :--- |
+| _Arafat Hasan Rafi_| _0112430088_ |
+| _Md Shakil_ | _011221316_ |
+| _Samia Chowdhury_ | _0112420290_ |
+| _Ayon Das_ | _0112430577_ |
+| _Gaurab Das_ | _0112410315_ |
 
 ## Notes
 
